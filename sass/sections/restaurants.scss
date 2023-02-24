@@ -1,0 +1,21 @@
+#restaurants {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-restaurants {
+    width: 300px;
+
+    div {
+        width: 300px;
+
+        img {
+            width: 300px;
+        }
+    }
+}
+
+.card-restaurants>div>img {
+    width: 300px;
+}
