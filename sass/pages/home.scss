@@ -28,9 +28,18 @@ body {
     margin-inline: 20px;
     padding-block: 40px;
 
-    &:hover div {
-        background-color: $color-purple;
-        opacity: 0.3;
+    h2 {
+        margin-bottom: 30px;
+    }
+
+    &:hover {
+        >div {
+            background-color: #D8BFD8;
+        }
+
+        i {
+            color: $color-purple;
+        }
     }
 
     div {
@@ -67,6 +76,12 @@ body {
     background-color: $off-white;
     padding-block: 40px;
     padding-inline: 10px;
+
+    h2 {
+        width: 100%;
+        margin-left: 30px;
+        margin-bottom: 30px;
+    }
 }
 
 .card-restaurants {
@@ -111,5 +126,21 @@ body {
                 stroke: none;
             }
         }
+    }
+}
+
+.new-restaurant-1,
+.new-restaurant-2 {
+    &::after {
+        position: relative;
+        content: 'Nouveau';
+        color: darkgreen;
+        font-size: 14px;
+        background-color: $color-green;
+        z-index: 100;
+        right: -210px;
+        bottom: 220px;
+        padding: 8px;
+        border-radius: 3px;
     }
 }

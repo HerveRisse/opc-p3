@@ -6,8 +6,14 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-h1,
-h2,
-h3 {
+#menu-title h1 {
+    font-family: 'Shrikhand', cursive;
+}
+
+section>h2 {
+    font-size: 22px;
+}
+
+footer>h2 {
     font-family: 'Shrikhand', cursive;
 }
