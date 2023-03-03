@@ -32,16 +32,6 @@ body {
         margin-bottom: 30px;
     }
 
-    &:hover {
-        >div {
-            background-color: #D8BFD8;
-        }
-
-        i {
-            color: $color-purple;
-        }
-    }
-
     div {
         display: flex;
         flex-direction: row;
@@ -68,6 +58,18 @@ body {
 
         i {
             margin-inline: 20px;
+        }
+    }
+}
+
+@for $i from 1 through 3 {
+    .step-#{$i}:hover {
+        .step-#{$i} {
+            background-color: #D8BFD8;
+        }
+
+        .icon-#{$i} {
+            color: $color-purple;
         }
     }
 }

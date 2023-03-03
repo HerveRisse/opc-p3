@@ -249,12 +249,6 @@ body {
 #process h2 {
   margin-bottom: 30px;
 }
-#process:hover > div {
-  background-color: #D8BFD8;
-}
-#process:hover i {
-  color: #9356DC;
-}
 #process div {
   display: flex;
   flex-direction: row;
@@ -279,6 +273,27 @@ body {
 }
 #process div i {
   margin-inline: 20px;
+}
+
+.step-1:hover .step-1 {
+  background-color: #D8BFD8;
+}
+.step-1:hover .icon-1 {
+  color: #9356DC;
+}
+
+.step-2:hover .step-2 {
+  background-color: #D8BFD8;
+}
+.step-2:hover .icon-2 {
+  color: #9356DC;
+}
+
+.step-3:hover .step-3 {
+  background-color: #D8BFD8;
+}
+.step-3:hover .icon-3 {
+  color: #9356DC;
 }
 
 #restaurants {
