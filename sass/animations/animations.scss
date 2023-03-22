@@ -1,0 +1,115 @@
+/*  - - - - - -  home  - - - - - -  */
+
+
+/* ------ loader ------ */
+
+#loader {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    animation-name: animateLoader;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+
+    @keyframes animateLoader {
+        0% {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        80% {
+            opacity: 1;
+        }
+
+        99% {
+            opacity: 0;
+            height: 100%;
+        }
+
+        100% {
+            height: 0;
+        }
+    }
+
+    div {
+        border-block: 3px solid $color-pink;
+        border-inline: 3px solid $color-purple;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        animation: spin 1s linear infinite;
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+
+        }
+    }
+}
+
+/* ------ Fonctionnement steps ------ */
+
+@for $i from 1 through 3 {
+    .step-#{$i}:hover {
+        background-color: $light-purple !important;
+
+        .icon-#{$i} {
+            color: $color-purple;
+        }
+    }
+}
+
+/* ------ heart fill ------ */
+
+svg {
+    path {
+        fill: transparent;
+        stroke: black;
+        stroke-width: 10px;
+
+    }
+
+    &:hover path {
+        fill: url(#gradientPinkPurple);
+        stroke: none;
+    }
+}
+
+
+/*  - - - - - -  page-menu  - - - - - -  */
+
+
+/* ------ dish appearance ------ */
+
+@for $i from 1 through 10 {
+    .card-menu-#{$i} {
+        animation-name: dishAppear;
+        animation-duration: 1s;
+        animation-delay: #{$i}00ms;
+        opacity: 0;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes dishAppear {
+        0% {
+            opacity: 0;
+            margin-top: 20px;
+        }
+
+        100% {
+            opacity: 1;
+            margin-top: 0px;
+        }
+    }
+}

@@ -62,18 +62,6 @@
         div:last-child {
             width: 30px;
             margin-right: 10px;
-
-            path {
-                fill: transparent;
-                stroke: black;
-                stroke-width: 10px;
-
-            }
-
-            &:hover path {
-                fill: url(#gradientPinkPurple);
-                stroke: none;
-            }
         }
     }
 }
@@ -161,30 +149,6 @@
         }
     }
 }
-
-@for $i from 1 through 10 {
-    .card-menu-#{$i} {
-        animation-name: dishAppear;
-        animation-duration: 1s;
-        animation-delay: #{$i}00ms;
-        opacity: 0;
-        animation-fill-mode: forwards;
-    }
-
-    @keyframes dishAppear {
-        0% {
-            opacity: 0;
-            margin-top: 20px;
-        }
-
-        100% {
-            opacity: 1;
-            margin-top: 0px;
-        }
-    }
-
-}
-
 
 #order {
     display: flex;

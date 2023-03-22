@@ -1,58 +1,3 @@
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#loader {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    z-index: 1000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    animation-name: animateLoader;
-    animation-duration: 3s;
-
-    @keyframes animateLoader {
-        0% {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        80% {
-            opacity: 1;
-        }
-
-        100% {
-            opacity: 0;
-        }
-    }
-
-    div {
-        border-block: 3px solid $color-pink;
-        border-inline: 3px solid $color-purple;
-        border-radius: 50%;
-        width: 100px;
-        height: 100px;
-        animation: spin 1s linear infinite;
-
-        @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-            }
-
-            100% {
-                transform: rotate(360deg);
-            }
-
-        }
-    }
-}
-
 #booking {
     display: flex;
     flex-direction: column;
@@ -117,17 +62,11 @@ body {
     }
 }
 
-@for $i from 1 through 3 {
-    .step-#{$i}:hover {
-        background-color: $light-purple !important;
-
-        .icon-#{$i} {
-            color: $color-purple;
-        }
-    }
-}
-
 #restaurants {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
     background-color: $off-white;
     padding-block: 40px;
     padding-inline: 20px;
@@ -150,6 +89,15 @@ body {
     overflow: hidden;
     background-color: white;
     position: relative;
+    width: 100%;
+
+    div {
+        width: 100%;
+
+        img {
+            width: 100%;
+        }
+    }
 
     >div:first-child {
         overflow: hidden;
@@ -174,18 +122,6 @@ body {
         div:last-child {
             width: 30px;
             margin-right: 10px;
-
-            path {
-                fill: transparent;
-                stroke: black;
-                stroke-width: 10px;
-
-            }
-
-            &:hover path {
-                fill: url(#gradientPinkPurple);
-                stroke: none;
-            }
         }
     }
 }
