@@ -120,6 +120,10 @@ body {
   align-items: center;
 }
 
+main {
+  max-width: 1440px;
+}
+
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -143,8 +147,13 @@ button {
   padding: 15px 30px;
 }
 
+header {
+  max-width: 1440px;
+}
+
 #header-home {
   width: 100vw;
+  max-width: 550px;
 }
 #header-home img {
   display: block;
@@ -186,6 +195,7 @@ button {
 footer {
   background-color: #363535;
   width: 100vw;
+  max-width: 1440px;
   padding: 20px;
 }
 footer h2 {
@@ -624,6 +634,7 @@ svg:hover path {
   width: 100vw;
   height: 300px;
   overflow: hidden;
+  max-width: 1440px;
 }
 #menu-title > div:first-child img {
   width: 100%;
@@ -734,6 +745,10 @@ svg:hover path {
     align-self: center;
     margin-bottom: 40px;
   }
+  #menu-title > div:last-child {
+    margin-inline: 100px;
+    padding-inline: 50px;
+  }
 }
 @media (min-width: 1024px) {
   #starter,
@@ -744,6 +759,7 @@ svg:hover path {
     flex-wrap: wrap;
     justify-content: flex-start;
     gap: 10px;
+    margin-inline: 50px;
   }
 }
 

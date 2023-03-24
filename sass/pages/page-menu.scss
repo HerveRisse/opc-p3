@@ -33,6 +33,7 @@
         width: 100vw;
         height: 300px;
         overflow: hidden;
+        max-width: 1440px;
 
         img {
             width: 100%;
@@ -162,6 +163,12 @@
         align-self: center;
         margin-bottom: 40px;
     }
+
+    #menu-title>div:last-child {
+        margin-inline: 100px;
+        padding-inline: 50px;
+    }
+
 }
 
 @media (min-width: 1024px) {
@@ -174,5 +181,6 @@
         flex-wrap: wrap;
         justify-content: flex-start;
         gap: 10px;
+        margin-inline: 50px;
     }
 }
